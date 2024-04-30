@@ -8,28 +8,27 @@ using namespace std;
 class ItemToPurchase {
    
    public:
-      ItemToPurchase();
       ItemToPurchase(string name, string description, 
                   int price, int quantity = 0);
       
-      void SetName(string name);
-      void SetDescription(string description);
-      void SetPrice(int price);
-      void SetQuantity(int quantity);
+      void SetName(string n);
+      void SetDescription(string d);
+      void SetPrice(double p);
+      void SetQuantity(int q);
       
       string GetName() const;
       string GetDescription() const;
-      int GetPrice() const;
+      double GetPrice() const;
       int GetQuantity() const;
       
-      void PrintItemCost();
-      void PrintItemDescription();
+      void PrintItemCost() const;
+      void PrintItemDescription() const;
    
    private:
-      string itemName;
+      string name;
       string itemDescription;
-      int itemPrice;
-      int itemQuantity;
+      double price;
+      int quantity;
 };
 
 
